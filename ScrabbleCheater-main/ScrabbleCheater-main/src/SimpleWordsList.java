@@ -7,7 +7,7 @@ public class SimpleWordsList {
 
     private Set<String> words = new HashSet<>();
 
-    public void loadFromFile(String fileName) {
+    public void initFromFile(String fileName) {
         try {
             List<String> lines = Files.readAllLines(Paths.get(fileName));
             for (String line : lines) {
@@ -15,6 +15,21 @@ public class SimpleWordsList {
             }
         } catch (IOException e) {
             System.err.println("Fehler beim Lesen der Datei: " + e.getMessage());
+        }
+    }
+
+    public String getNormalized(String word){
+        char[] chars = word.toCharArray();
+        Arrays.sort(chars);
+        return new String(chars);
+    }
+
+    public void equals(String perm1, String perm2){
+        String sortedPerm1 = this.getNormalized(perm1);
+        String sortedPerm2 = this.getNormalized(perm2);
+
+        if (sortedPerm1.equals(sortedPerm2)){
+            System.out.println("Permutation");
         }
     }
 
