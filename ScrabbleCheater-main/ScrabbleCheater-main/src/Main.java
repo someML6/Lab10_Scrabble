@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         SimpleWordsList wordList = new SimpleWordsList();
-        wordList.loadFromFile("src/SimpleWords.txt");
+        wordList.loadFromFile("ScrabbleCheater-main/SimpleWords.txt");
 
         System.out.println("Wörter geladen: " + wordList.size());
 
