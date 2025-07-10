@@ -33,6 +33,20 @@ public class SimpleWordsList {
         }
     }
 
+    public Set<String> validWordsUsingAllTiles(String input){
+        String sortedInput = this.getNormalized(input.toLowerCase());
+        Set<String> permutations = new HashSet<>();
+
+        for(String word : words){
+            String sortedWord = this.getNormalized(word);
+
+            if(sortedWord.equals(sortedInput)){
+                permutations.add(word);
+            }
+        }
+        return permutations;
+    }
+
     public int size() {
         return words.size();
     }

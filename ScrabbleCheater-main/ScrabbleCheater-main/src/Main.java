@@ -5,21 +5,11 @@ public class Main {
         SimpleWordsList wordList = new SimpleWordsList();
         wordList.initFromFile("ScrabbleCheater-main/SimpleWords.txt");
 
-        System.out.println("Wörter geladen: " + wordList.size());
+        //AUFGABE 2
         System.out.println(wordList.getNormalized("hka"));
-
         wordList.equals("bcda", "acdb");
 
-
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Gib ein Wort ein: ");
-        String input = scanner.nextLine();
-
-        if (wordList.contains(input)) {
-            System.out.println("✅");
-        } else {
-            System.out.println("❌");
-        }
+        //AUFGABE 3
+        System.out.print("Ähnliche Wörter: " + wordList.validWordsUsingAllTiles("undh"));
     }
 }
