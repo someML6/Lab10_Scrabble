@@ -48,46 +48,6 @@ public class SimpleWordsList {
 
     }
 
-    // Map für Wörter nach sortierten Buchstaben
-    Map<String, List<String>> wordMap = new HashMap<>();
-
-    public void initFromFile2(String filename) throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader(filename));
-        String word;
-        while ((word = reader.readLine()) != null) {
-            String key = normalize(word);
-            wordMap.computeIfAbsent(key, k -> new ArrayList<>()).add(word);
-        }
-        reader.close();
-    }
-
-    // Aufgabe 4, 5
-
-    public Set<String> validWordsUsingAllTiles2(String tileRack) {
-        String key = normalize(tileRack);
-        return new HashSet<>(wordMap.getOrDefault(key, new ArrayList<>()));
-    }
-
-    public String normalize2(String input) {
-        char[] chars = input.toCharArray();
-        Arrays.sort(chars);
-        return new String(chars);
-    }
-
-    @Override
-    public boolean equals2(Object obj) {
-        if (this == obj) return true;
-        if (!(obj instanceof Permutation)) return false;
-        Permutation other = (Permutation) obj;
-        return this.getNormalized().equals(other.getNormalized());
-    }
-
-    @Override
-    public int hashCode2() {
-        return this.getNormalized().hashCode();
-    }
-
-
     public int size() {
         return words.size();
     }
