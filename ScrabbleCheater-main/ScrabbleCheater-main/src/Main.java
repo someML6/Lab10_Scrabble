@@ -19,6 +19,7 @@ public class Main {
         // Aufgabe 6
         testword(input, wordList);
         testword(input, wordList);
+        testword(input, wordList);
         //
 
     }

@@ -45,6 +45,7 @@ public class SimpleWordsList {
             }
         }
         return permutations;
+
     }
 
     // Map für Wörter nach sortierten Buchstaben
