@@ -60,6 +60,8 @@ public class SimpleWordsList {
         reader.close();
     }
 
+    // Aufgabe 4, 5
+
     public Set<String> validWordsUsingAllTiles2(String tileRack) {
         String key = normalize(tileRack);
         return new HashSet<>(wordMap.getOrDefault(key, new ArrayList<>()));
