@@ -7,18 +7,19 @@ public class Main {
         wordList.initFromFile("ScrabbleCheater-main/ScrabbleCheater-main/SimpleWords.txt");
 
 
-        //AUFGABE 2
-        //System.out.println(wordList.getNormalized("hka"));
-        //wordList.equals("bcda", "acdb");
+        /*/AUFGABE 2
+        System.out.println(wordList.getNormalized("hka"));
+        wordList.equals("bcda", "acdb");
+        /*/
 
-        //AUFGABE 3
-        //System.out.println("Ähnliche Wörter: " + wordList.validWordsUsingAllTiles("undh"));
-
+        /*/AUFGABE 3
+        System.out.println("Ähnliche Wörter: " + wordList.validWordsUsingAllTiles("undh"));
+        /*/
 
         // Aufgabe 6
         testword(input, wordList);
         testword(input, wordList);
-
+        //
 
     }
 
